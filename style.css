@@ -76,6 +76,12 @@ header {
   top: 0;
 }
 
+/* Nuevas barras */
+.camara::after { width: 80%; }
+.tresd::after { width: 40%; }
+.after::after { width: 50%; }
+
+
 /* Niveles personalizados */
 .html::after { width: 70%; }
 .css::after { width: 70%; }
