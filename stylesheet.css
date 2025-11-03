@@ -1,33 +1,47 @@
-body {
-  font-family: Arial, sans-serif;
+/* Reset básico */
+* {
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
-  color: #333;
+  box-sizing: border-box;
 }
 
-header {
-  background-color: #007acc;
-  color: white;
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #74ebd5, #ACB6E5);
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  background-color: white;
   padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  max-width: 600px;
+  width: 90%;
   text-align: center;
 }
 
-section {
-  padding: 2rem;
+header h1 {
+  font-size: 2.5rem;
+  color: #007acc;
 }
 
-.proyecto {
-  background-color: white;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+header p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.empty p {
+  font-style: italic;
+  color: #666;
 }
 
 footer {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 1rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #999;
 }
