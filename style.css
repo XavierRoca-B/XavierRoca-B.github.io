@@ -1,10 +1,3 @@
-/* Reset básico */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
   margin: 0;
   padding: 0;
@@ -12,10 +5,10 @@ body {
   background: linear-gradient(to right, #74ebd5, #ACB6E5);
   color: #333;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
+  position: relative;
 }
 
+/* Encabezado arriba a la izquierda */
 header {
   position: absolute;
   top: 20px;
@@ -23,25 +16,16 @@ header {
   text-align: left;
 }
 
-
-main {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.container {
-  background-color: white;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-  max-width: 600px;
-  width: 90%;
+/* Proyectos centrados */
+#proyectos {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
 }
 
+/* Contacto abajo centrado */
 #contacto {
   position: absolute;
   bottom: 30px;
@@ -50,6 +34,7 @@ main {
   text-align: center;
 }
 
+/* Botón de contacto */
 .boton-contacto {
   display: inline-block;
   margin-top: 1rem;
@@ -63,29 +48,4 @@ main {
 
 .boton-contacto:hover {
   background-color: #005f99;
-}
-
-footer {
-  display: none; /* Lo ocultamos por ahora */
-}
-
-header h1 {
-  font-size: 2.5rem;
-  color: #007acc;
-}
-
-header p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-}
-
-.empty p {
-  font-style: italic;
-  color: #666;
-}
-
-footer {
-  margin-top: 2rem;
-  font-size: 0.9rem;
-  color: #999;
 }
