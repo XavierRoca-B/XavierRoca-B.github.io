@@ -25,6 +25,66 @@ header {
   text-align: center;
 }
 
+#conocimientos {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+#conocimientos h2 {
+  font-size: 2rem;
+  color: #007acc;
+  margin-bottom: 1rem;
+}
+
+.grupo {
+  margin-bottom: 2rem;
+}
+
+.grupo h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.skill {
+  margin: 0.5rem auto;
+  max-width: 400px;
+  text-align: left;
+}
+
+.skill span {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: bold;
+}
+
+.barra {
+  height: 10px;
+  background-color: #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+
+.barra::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  background-color: #007acc;
+  border-radius: 5px;
+  left: 0;
+  top: 0;
+}
+
+/* Niveles personalizados */
+.html::after { width: 70%; }
+.css::after { width: 70%; }
+.java::after { width: 30%; }
+.sql::after { width: 30%; }
+.canva::after { width: 90%; }
+.photoshop::after { width: 75%; }
+
+
 /* Contacto abajo centrado */
 #contacto {
   position: absolute;
