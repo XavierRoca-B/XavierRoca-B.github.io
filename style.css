@@ -25,6 +25,50 @@ header {
   text-align: center;
 }
 
+.barra::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  background-color: #007acc;
+  border-radius: 5px;
+  left: 0;
+  top: 0;
+  width: 0;
+  animation: cargarBarra 2s ease-out forwards;
+}
+
+@keyframes cargarBarra {
+  to {
+    width: var(--nivel);
+  }
+}
+
+
+.html::after { --nivel: 70%; }
+.css::after { --nivel: 70%; }
+.java::after { --nivel: 30%; }
+.sql::after { --nivel: 30%; }
+.canva::after { --nivel: 90%; }
+.photoshop::after { --nivel: 75%; }
+.camara::after { --nivel: 80%; }
+.tresd::after { --nivel: 40%; }
+.after::after { --nivel: 50%; }
+
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: aparecer 1.5s ease-out forwards;
+}
+
+@keyframes aparecer {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
 #conocimientos {
   margin-top: 2rem;
   text-align: center;
