@@ -6,13 +6,30 @@
 }
 
 body {
+  margin: 0;
+  padding: 0;
   font-family: 'Segoe UI', sans-serif;
   background: linear-gradient(to right, #74ebd5, #ACB6E5);
   color: #333;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+}
+
+header {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  text-align: left;
+}
+
+
+main {
+  flex: 1;
+  display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .container {
@@ -26,7 +43,11 @@ body {
 }
 
 #contacto {
-  margin-top: 2rem;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
 }
 
 .boton-contacto {
@@ -44,6 +65,9 @@ body {
   background-color: #005f99;
 }
 
+footer {
+  display: none; /* Lo ocultamos por ahora */
+}
 
 header h1 {
   font-size: 2.5rem;
