@@ -3,66 +3,56 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mi Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Portfolio de Xavi</title>
+  <link rel="stylesheet" href="stylesheet.css" />
 </head>
 <body>
   <header>
-    <h1>Hola, soy Xavi</h1>
+    <h1 class="maquina">Hola, soy Xavi</h1>
     <p>Desarrollador web en formación</p>
   </header>
 
-  <section id="contacto">
+  <main>
+    <section id="conocimientos" class="fade-in">
+      <h2>Conocimientos</h2>
+
+      <div class="grupo">
+        <h3>💻 Técnicos</h3>
+        <div class="skill"><span>HTML</span><div class="barra html"></div></div>
+        <div class="skill"><span>CSS</span><div class="barra css"></div></div>
+        <div class="skill"><span>Java</span><div class="barra java"></div></div>
+        <div class="skill"><span>SQL</span><div class="barra sql"></div></div>
+      </div>
+
+      <div class="grupo">
+        <h3>🎨 Creativos</h3>
+        <div class="skill"><span>Canva</span><div class="barra canva"></div></div>
+        <div class="skill"><span>Photoshop</span><div class="barra photoshop"></div></div>
+        <div class="skill"><span>Cámara</span><div class="barra camara"></div></div>
+      </div>
+
+      <div class="grupo">
+        <h3>🧩 Multimedia</h3>
+        <div class="skill"><span>3D</span><div class="barra tresd"></div></div>
+        <div class="skill"><span>After Effects</span><div class="barra after"></div></div>
+      </div>
+    </section>
+
+    <section id="proyectos" class="fade-in">
+      <h2>Mis proyectos</h2>
+      <div class="proyecto">
+        <h3>Proyecto 1</h3>
+        <p>Diseño multimedia</p>
+        <a href="#">Ver más</a>
+      </div>
+    </section>
+  </main>
+
+  <section id="contacto" class="fade-in">
     <h2>Contacto</h2>
     <p>¿Quieres hablar conmigo? ¡Escríbeme!</p>
-  <a href="mailto:xaavii.dev@gmail.com" class="boton-contacto">Enviar correo</a>
-</section>
-
-  <section id="conocimientos">
-  <h2>Conocimientos</h2>
-
-  <div class="grupo">
-    <h3>💻 Técnicos</h3>
-    <div class="skill"><span>HTML</span><div class="barra html"></div></div>
-    <div class="skill"><span>CSS</span><div class="barra css"></div></div>
-    <div class="skill"><span>Java</span><div class="barra java"></div></div>
-    <div class="skill"><span>SQL</span><div class="barra sql"></div></div>
-  </div>
-
-  <div class="grupo">
-    <h3>🎨 Creativos</h3>
-    <div class="skill"><span>Canva</span><div class="barra canva"></div></div>
-    <div class="skill"><span>Photoshop</span><div class="barra photoshop"></div></div>
-    <div class="skill"><span>Cámara</span><div class="barra camara"></div></div>
-  </div>
-
-  <div class="grupo">
-    <h3>🧩 Multimedia</h3>
-    <div class="skill"><span>3D</span><div class="barra tresd"></div></div>
-    <div class="skill"><span>After Effects</span><div class="barra after"></div></div>
-  </div>
-</section>
-  <section id="conocimientos" class="fade-in">...</section>
-<section id="proyectos" class="fade-in">...</section>
-<section id="contacto" class="fade-in">...</section>
-
-
-
-
-
-  <section id="proyectos">
-    <h2>Mis proyectos</h2>
-    <div class="proyecto">
-      <h3>Proyecto 1</h3>
-      <p>Descripción breve del proyecto.</p>
-      <a href="#">Ver más</a>
-    </div>
-    <!-- Puedes duplicar este bloque para más proyectos -->
+    <a href="mailto:xaavii.dev@gmail.com" class="boton-contacto">Enviar correo</a>
   </section>
-
-  <footer>
-    <p>Contacto: xavi@email.com</p>
-  </footer>
 
   <script src="script.js"></script>
 </body>
