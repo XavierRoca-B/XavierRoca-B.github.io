@@ -2,10 +2,10 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to right, #74ebd5, #ACB6E5);
-  color: #333;
-  height: 100vh;
-  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  cursor: url('https://cdn-icons-png.flaticon.com/128/32/32195.png'), auto;
 }
 
 /* Encabezado arriba a la izquierda */
@@ -13,48 +13,37 @@ header {
   position: absolute;
   top: 20px;
   left: 20px;
-  text-align: left;
+  z-index: 2;
+  color: #007acc;
 }
 
-/* Proyectos centrados */
-#proyectos {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-.barra::after {
-  content: '';
-  position: absolute;
-  height: 100%;
-  background-color: #007acc;
-  border-radius: 5px;
-  left: 0;
-  top: 0;
+/* Efecto máquina */
+.maquina {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid #007acc;
   width: 0;
-  animation: cargarBarra 2s ease-out forwards;
+  animation: escribir 3s steps(30, end) forwards;
 }
 
-@keyframes cargarBarra {
+@keyframes escribir {
   to {
-    width: var(--nivel);
+    width: 100%;
   }
 }
 
+/* Main centrado */
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding-top: 100px;
+}
 
-.html::after { --nivel: 70%; }
-.css::after { --nivel: 70%; }
-.java::after { --nivel: 30%; }
-.sql::after { --nivel: 30%; }
-.canva::after { --nivel: 90%; }
-.photoshop::after { --nivel: 75%; }
-.camara::after { --nivel: 80%; }
-.tresd::after { --nivel: 40%; }
-.after::after { --nivel: 50%; }
-
-
+/* Secciones animadas */
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
@@ -68,9 +57,8 @@ header {
   }
 }
 
-
+/* Conocimientos */
 #conocimientos {
-  margin-top: 2rem;
   text-align: center;
 }
 
@@ -118,24 +106,41 @@ header {
   border-radius: 5px;
   left: 0;
   top: 0;
+  width: 0;
+  animation: cargarBarra 2s ease-out forwards;
 }
 
-/* Nuevas barras */
-.camara::after { width: 80%; }
-.tresd::after { width: 40%; }
-.after::after { width: 50%; }
+@keyframes cargarBarra {
+  to {
+    width: var(--nivel);
+  }
+}
 
+/* Niveles */
+.html::after { --nivel: 70%; }
+.css::after { --nivel: 70%; }
+.java::after { --nivel: 30%; }
+.sql::after { --nivel: 30%; }
+.canva::after { --nivel: 90%; }
+.photoshop::after { --nivel: 75%; }
+.camara::after { --nivel: 80%; }
+.tresd::after { --nivel: 40%; }
+.after::after { --nivel: 50%; }
 
-/* Niveles personalizados */
-.html::after { width: 70%; }
-.css::after { width: 70%; }
-.java::after { width: 30%; }
-.sql::after { width: 30%; }
-.canva::after { width: 90%; }
-.photoshop::after { width: 75%; }
+/* Proyectos */
+#proyectos {
+  text-align: center;
+}
 
+.proyecto {
+  background-color: white;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
 
-/* Contacto abajo centrado */
+/* Contacto */
 #contacto {
   position: absolute;
   bottom: 30px;
@@ -144,7 +149,6 @@ header {
   text-align: center;
 }
 
-/* Botón de contacto */
 .boton-contacto {
   display: inline-block;
   margin-top: 1rem;
@@ -154,8 +158,18 @@ header {
   text-decoration: none;
   border-radius: 8px;
   transition: background-color 0.3s ease;
+  animation: pulso 2s infinite;
 }
 
 .boton-contacto:hover {
   background-color: #005f99;
+}
+
+@keyframes pulso {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
 }
